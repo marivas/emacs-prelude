@@ -8,5 +8,6 @@ el-get
 semanticdb
 custom.el
 eshell
+swank
 url
 
