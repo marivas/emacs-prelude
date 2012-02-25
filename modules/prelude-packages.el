@@ -39,10 +39,11 @@
 (package-initialize)
 
 (defvar prelude-packages
-  '(auctex clojure-mode coffee-mode deft full-ack gist groovy-mode haml-mode
-           haskell-mode inf-ruby markdown-mode paredit projectile
-           python sass-mode rainbow-mode scss-mode solarized-theme
-           yaml-mode yari zenburn-theme)
+  '(ack-and-a-half auctex clojure-mode coffee-mode deft expand-region
+                   gist groovy-mode haml-mode haskell-mode inf-ruby
+                   magit magithub markdown-mode paredit projectile python
+                   sass-mode rainbow-mode scss-mode solarized-theme
+                   volatile-highlights yaml-mode yari zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
@@ -61,5 +62,4 @@
       (package-install p))))
 
 (provide 'prelude-packages)
-
 ;;; prelude-packages.el ends here

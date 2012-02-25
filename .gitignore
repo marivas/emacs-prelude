@@ -3,6 +3,7 @@ auto-save-list
 recentf
 savehist
 saveplace
+eshell
 elpa
 el-get
 semanticdb
@@ -10,4 +11,4 @@ custom.el
 eshell
 swank
 url
-
+ede-projects.el
