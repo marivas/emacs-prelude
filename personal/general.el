@@ -1,1 +1,1 @@
-(setq whitespace-line-column 120)
+(setq whitespace-line-column 180)
