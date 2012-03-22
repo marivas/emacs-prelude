@@ -104,7 +104,10 @@
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
+(global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-c w") (make-repeatable-command 'er/expand-region))
+
+(global-set-key (kbd "C-x j") 'helm)
 
 (provide 'prelude-global-keybindings)
 
