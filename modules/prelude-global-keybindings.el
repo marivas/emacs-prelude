@@ -42,10 +42,6 @@
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
-;; File finding
-(global-set-key (kbd "C-c r") 'bury-buffer)
-(global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
-
 ;; Window switching. (C-x o goes to the next window)
 (global-set-key (kbd "C-x O") (lambda ()
                                 (interactive)
@@ -79,9 +75,6 @@
       (occur (if isearch-regexp
                  isearch-string
                (regexp-quote isearch-string))))))
-
-;; cycle through buffers
-(global-set-key (kbd "<C-tab>") 'bury-buffer)
 
 ;; use hippie-expand instead of dabbrev
 (global-set-key (kbd "M-/") 'hippie-expand)
