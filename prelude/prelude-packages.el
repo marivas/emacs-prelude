@@ -1,9 +1,9 @@
 ;;; prelude-packages.el --- Emacs Prelude: default package selection.
 ;;
-;; Copyright (c) 2011 Bozhidar Batsov
+;; Copyright (c) 2011-2012 Bozhidar Batsov
 ;;
-;; Author: Bozhidar Batsov <bozhidar.batsov@gmail.com>
-;; URL: http://www.emacswiki.org/cgi-bin/wiki/Prelude
+;; Author: Bozhidar Batsov <bozhidar@batsov.com>
+;; URL: http://batsov.com/emacs-prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
 
@@ -32,9 +32,8 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-
+(require 'cl)
 (require 'package)
-(require 'melpa)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
@@ -42,11 +41,8 @@
 (setq url-http-attempt-keepalives nil)
 
 (defvar prelude-packages
-  '(ack-and-a-half auctex clojure-mode coffee-mode deft expand-region
-                   gist haml-mode haskell-mode helm helm-projectile inf-ruby
-                   magit magithub markdown-mode paredit projectile
-                   python sass-mode rainbow-mode scss-mode solarized-theme
-                   volatile-highlights yaml-mode yari yasnippet zenburn-theme)
+  '(melpa expand-region gist helm helm-projectile magit magithub
+                  rainbow-mode volatile-highlights yasnippet zenburn-theme)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()

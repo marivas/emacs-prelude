@@ -1,9 +1,9 @@
 ;;; prelude-core.el --- Emacs Prelude: core Prelude defuns.
 ;;
-;; Copyright (c) 2011 Bozhidar Batsov
+;; Copyright (c) 2011-2012 Bozhidar Batsov
 ;;
-;; Author: Bozhidar Batsov <bozhidar.batsov@gmail.com>
-;; URL: http://www.emacswiki.org/cgi-bin/wiki/Prelude
+;; Author: Bozhidar Batsov <bozhidar@batsov.com>
+;; URL: http://batsov.com/emacs-prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
 
@@ -44,9 +44,6 @@ Emacs load path."
                  (not (equal f ".."))
                  (not (equal f ".")))
         (add-to-list 'load-path name)))))
-
-;; add the first level subfolders of vendor automatically
-(prelude-add-subfolders-to-load-path prelude-vendor-dir)
 
 (defun prelude-open-with ()
   "Simple function that allows us to open the underlying
@@ -275,22 +272,7 @@ there's a region, all lines that region covers will be duplicated."
 (defun prelude-recompile-init ()
   "Byte-compile all your dotfiles again."
   (interactive)
-  (byte-recompile-directory prelude-dir 0)
-  (byte-recompile-directory prelude-vendor-dir 0))
-
-(defun prelude-regen-autoloads (&optional force-regen)
-  "Regenerate the autoload definitions file if necessary and load it."
-  (interactive "P")
-  (let ((autoload-dir prelude-vendor-dir)
-        (generated-autoload-file autoload-file))
-    (when (or force-regen
-              (not (file-exists-p autoload-file))
-              (some (lambda (f) (file-newer-than-file-p f autoload-file))
-                    (directory-files autoload-dir t "\\.el$")))
-      (message "Updating autoloads...")
-      (let (emacs-lisp-mode-hook)
-        (update-directory-autoloads autoload-dir))))
-  (load autoload-file))
+  (byte-recompile-directory prelude-dir 0))
 
 (defun prelude-sudo-edit (&optional arg)
   (interactive "p")

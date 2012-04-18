@@ -1,9 +1,9 @@
 ;;; prelude-editor.el --- Emacs Prelude: enhanced core editing experience.
 ;;
-;; Copyright (c) 2011 Bozhidar Batsov
+;; Copyright (c) 2011-2012 Bozhidar Batsov
 ;;
-;; Author: Bozhidar Batsov <bozhidar.batsov@gmail.com>
-;; URL: http://www.emacswiki.org/cgi-bin/wiki/Prelude
+;; Author: Bozhidar Batsov <bozhidar@batsov.com>
+;; URL: http://batsov.com/emacs-prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
 
@@ -36,12 +36,6 @@
 (defgroup editor nil
   "Emacs Prelude Editor enhancements"
   :group 'prelude)
-
-;; Emacs users obviously have little need for Command and Option keys,
-;; but they do need Meta and Super
-(when (eq system-type 'darwin)
-  (setq mac-command-modifier 'super)
-  (setq mac-option-modifier 'meta))
 
 ;; Death to the tabs!  However, tabs historically indent to the next
 ;; 8-character offset; specifying anything else will cause *mass*
@@ -203,18 +197,13 @@
 
 ;; load yasnippet
 (require 'yasnippet)
-(setq yas/snippet-dirs prelude-snippets-dir prelude-personal-snippets-dir)
 (yas/global-mode 1)
-
-;; Helm makes finding stuff in Emacs much simpler
-(require 'helm-config)
 
 ;; projectile is a project management mode
 (require 'projectile)
 (projectile-global-mode t)
-;; FIXME - helm sources
-(require 'helm-locate)
-(require 'helm-buffers)
+
+(require 'helm-misc)
 (require 'helm-projectile)
 
 (defun helm-prelude ()
