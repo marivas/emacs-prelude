@@ -1,12 +1,11 @@
 ;;; prelude-clojure.el --- Emacs Prelude: Clojure programming configuration.
 ;;
-;; Copyright (c) 2011-2012 Bozhidar Batsov
+;; Copyright © 2011-2013 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://batsov.com/prelude
 ;; Version: 1.0.0
 ;; Keywords: convenience
-;; Package-Requires: ((prelude-lisp "1.0.0") (clojure-mode "1.11.5") (nrepl "0.1.4"))
 
 ;; This file is not part of GNU Emacs.
 
