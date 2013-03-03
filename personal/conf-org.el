@@ -7,4 +7,4 @@
                              "~/org/personal.org"
                              "~/org/ideas.org"
                              "~/org/notes.org"
-                             "~/org/nuevaweb.org"))
+                             "~/org/links.org"))
