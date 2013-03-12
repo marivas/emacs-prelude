@@ -101,6 +101,8 @@ $ git pull
 The `path/to/prelude/installation` is usually `~/.emacs.d` (at least
 on Unix systems).
 
+Alternatively you can run <kbd>M-x prelude-update</kbd> from Emacs itself.
+
 It's generally a good idea to stop Emacs before you do the update. The
 next time Prelude starts it will install any new dependencies (if
 there are such).
@@ -137,6 +139,9 @@ By default most of the modules that ship with Prelude are not loaded.
 ```
 
 You'll need to adjust your `prelude-modules.el` file once the installation is done.
+
+After you've uncommented a module you should either restart Emacs or evaluate the module
+`require` expression with <kbd>C-x C-e</kbd>.
 
 ## Running
 
