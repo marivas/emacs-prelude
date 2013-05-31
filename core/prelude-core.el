@@ -97,6 +97,11 @@ Position the cursor at its beginning, according to the current mode."
   (move-end-of-line nil)
   (newline-and-indent))
 
+(defun prelude-top-join-line ()
+  "Join the current line with the line beneath it."
+  (interactive)
+  (delete-indentation 1))
+
 (defun prelude-move-line-up ()
   "Move the current line up."
   (interactive)
@@ -408,6 +413,7 @@ Doesn't mess with special buffers."
     (message "Updating Prelude...")
     (cd prelude-dir)
     (shell-command "git pull")
+    (prelude-recompile-init)
     (message "Update finished. Restart Emacs to complete the process.")))
 
 (provide 'prelude-core)
