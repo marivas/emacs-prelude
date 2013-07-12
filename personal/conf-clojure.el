@@ -5,7 +5,7 @@
 (prelude-ensure-module-deps '(midje-mode))
 
 
-(add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
+;(add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
 
 (eval-after-load 'nrepl
   '(progn
