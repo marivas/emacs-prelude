@@ -22,3 +22,4 @@ savefile/
 projectile-bookmarks.eld
 session*
 .mc-lists.el
+.cask
