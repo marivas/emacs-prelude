@@ -2,14 +2,14 @@
 ;;; Commentary:
 ;;; Code:
 (require 'prelude-clojure)
-(prelude-ensure-module-deps '(midje-mode))
+;(prelude-ensure-module-deps '(midje-mode))
 
 
 ;(add-to-list 'auto-mode-alist '("\\.cljs\\'" . clojure-mode))
 
 (eval-after-load 'nrepl
   '(progn
-     (setq nrepl-popup-stacktraces nil)))
+     (setq cider-popup-stacktraces nil)))
 
 
 (provide 'conf-clojure)
