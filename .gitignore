@@ -14,10 +14,10 @@ swank
 url
 ede-projects.el
 .DS_Store
-custom.el
 places
 .smex-items
 savefile/
+personal/site/
 projectile-bookmarks.eld
 session*
 .mc-lists.el
