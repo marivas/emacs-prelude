@@ -6,6 +6,9 @@
 (add-hook 'prog-mode-hook 'turn-off-flyspell t)
 
 
+;;; Desactivamos guru-mode
+(setq prelude-guru nil)
+
 (defvar prelude-personal-site-dir (expand-file-name "site" prelude-personal-dir)
   "This directory is for your personal configuration, that you want loaded only for this site.")
 
