@@ -1,0 +1,3 @@
+[submodule "submodules/tern"]
+	path = submodules/tern
+	url = https://github.com/marijnh/tern.git
