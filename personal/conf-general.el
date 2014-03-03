@@ -15,3 +15,10 @@
 (when (file-exists-p prelude-personal-dir)
   (message "Loading site personal configuration files in %s..." prelude-personal-site-dir)
   (mapc 'load (directory-files prelude-personal-site-dir 't "^[^#].*el$")))
+
+
+;; for company
+(eval-after-load 'company '(add-to-list 'company-backends 'company-cider))
+
+
+(provide 'conf-general)
