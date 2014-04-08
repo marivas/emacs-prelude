@@ -11,6 +11,7 @@
 ;; (require 'prelude-haskell)
 (require 'prelude-ido)
 ;;(require 'prelude-helm)
+(require 'prelude-company)
 (require 'prelude-js)
 (require 'prelude-key-chord)
 ;; (require 'prelude-latex)
