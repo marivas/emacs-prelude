@@ -76,12 +76,5 @@
 (load-theme 'zenburn t)
 ;;(load-theme 'misterioso t)
 
-(require 'desktop)
-(setq desktop-save t)
-(setq desktop-path (list prelude-savefile-dir))
-(setq desktop-dirname prelude-savefile-dir)
-
-(desktop-save-mode +1)
-
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here
