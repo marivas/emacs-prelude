@@ -64,6 +64,7 @@
     gitignore-mode
     grizzl
     guru-mode
+    ov
     projectile
     magit
     move-text
