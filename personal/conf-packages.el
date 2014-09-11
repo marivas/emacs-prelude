@@ -1,7 +1,7 @@
 ;;; Mis packages
 (require 'package)
 
-(defvar my-packages '(rvm deft ace-jump-mode  es-mode))
+(defvar my-packages '(rvm deft ace-jump-mode  es-mode restclient))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
