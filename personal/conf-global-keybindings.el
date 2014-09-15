@@ -12,6 +12,3 @@
 
 ;;(require 'ace-jump-mode)
 ;;(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-
-;; desabilitamos ace-window puesto por defecto por prelude
-(global-set-key [remap other-window] 'other-window)
