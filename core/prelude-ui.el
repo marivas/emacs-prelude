@@ -73,8 +73,9 @@
                                           "%b"))))
 
 ;; use zenburn as the default theme
-(load-theme 'zenburn t)
-;;(load-theme 'misterioso t)
+;;(load-theme 'zenburn t)
+(load-theme prelude-theme t)
+
 
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here
