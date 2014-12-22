@@ -48,7 +48,6 @@
   '(ace-jump-mode
     ace-jump-buffer
     ace-window
-    ack-and-a-half
     anzu
     browse-kill-ring
     dash
