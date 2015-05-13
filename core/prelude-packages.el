@@ -45,7 +45,8 @@
 (package-initialize)
 
 (defvar prelude-packages
-  '(avy
+  '(ace-window
+    avy
     anzu
     browse-kill-ring
     dash
