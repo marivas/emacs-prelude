@@ -40,7 +40,11 @@
 (exec-path-from-shell-initialize)
 
 ;; It's all in the Meta
-(setq ns-function-modifier 'hyper)
+;;(setq ns-function-modifier 'hyper)
+
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'super)
+(setq mac-pass-command-to-system nil)
 
 ;; proced-mode doesn't work on OS X so we use vkill instead
 (autoload 'vkill "vkill" nil t)
