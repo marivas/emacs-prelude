@@ -39,12 +39,13 @@
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
 
-;; It's all in the Meta
-;;(setq ns-function-modifier 'hyper)
+;; (setq mac-option-modifier 'meta)
+;; (setq mac-command-modifier 'super)
+;; (setq mac-pass-command-to-system nil)
 
-(setq mac-option-modifier 'meta)
-(setq mac-command-modifier 'super)
-(setq mac-pass-command-to-system nil)
+;; It's all in the Meta
+(setq ns-function-modifier 'hyper)
+
 
 ;; proced-mode doesn't work on OS X so we use vkill instead
 (autoload 'vkill "vkill" nil t)
