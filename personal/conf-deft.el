@@ -1,7 +1,8 @@
 ;;; conf-deft.el
+(require 'org)
 (require 'deft)
 
-(setq deft-extension "org")
+(setq deft-extensions '("org" "txt" "md"))
 (setq deft-text-mode 'org-mode)
 (setq deft-directory "~/org")
 
