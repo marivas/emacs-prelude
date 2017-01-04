@@ -44,7 +44,7 @@
                '("melpa" . "https://melpa.org/packages/") t))
 (add-to-list 'package-archives
              '("geiser" . "http://mirrors.fe.up.pt/pub/nongnu/geiser/packages/") t)
-=
+
 ;; load the pinned packages
 (let ((prelude-pinned-packages-file (expand-file-name "prelude-pinned-packages.el" prelude-dir)))
   (if (file-exists-p prelude-pinned-packages-file)
