@@ -2,7 +2,7 @@
 
 
 
-(add-hook 'web-mode-hook (lambda () (tern-mode t)))
+;;(add-hook 'web-mode-hook (lambda () (tern-mode t)))
 
 
 (provide 'conf-web)

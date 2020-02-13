@@ -18,7 +18,7 @@
 
 
 ;; for company
-(eval-after-load 'company '(nconc company-backends '(company-inf-ruby company-tern)))
+(eval-after-load 'company '(nconc company-backends '(company-inf-ruby)))
 
 
 (provide 'conf-general)
