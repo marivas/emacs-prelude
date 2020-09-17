@@ -4,15 +4,14 @@
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
-;; Version: 1.0.0
-;; Keywords: convenience
 
 ;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
 ;; Takes care of the automatic installation of all the packages required by
-;; Emacs Prelude.
+;; Emacs Prelude.  This module also adds a couple of package.el extensions
+;; and provides functionality for auto-installing major modes on demand.
 
 ;;; License:
 
@@ -35,7 +34,9 @@
 (require 'cl-lib)
 (require 'package)
 
-; accessing a package repo over https on Windows is a no go, so we
+;;;; Package setup and additional utility functions
+
+;; accessing a package repo over https on Windows is a no go, so we
 ;; fallback to http there
 (if (eq system-type 'windows-nt)
     (add-to-list 'package-archives
@@ -79,6 +80,7 @@
     projectile
     magit
     move-text
+    nlinum
     operate-on-number
     smartparens
     smartrep
@@ -106,8 +108,6 @@
 Missing packages are installed automatically."
   (mapc #'prelude-require-package packages))
 
-(define-obsolete-function-alias 'prelude-ensure-module-deps 'prelude-require-packages)
-
 (defun prelude-install-packages ()
   "Install all packages listed in `prelude-packages'."
   (unless (prelude-packages-installed-p)
@@ -130,6 +130,8 @@ removing unwanted packages."
   (interactive)
   (package-show-package-list
    (cl-set-difference package-activated-list prelude-packages)))
+
+;;;; Auto-installation of major modes on demand
 
 (defmacro prelude-auto-install (extension package mode)
   "When file with EXTENSION is opened triggers auto-install of PACKAGE.
