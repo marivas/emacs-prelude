@@ -57,9 +57,9 @@
 
 (defvar prelude-packages
   '(ace-window
+    ag
     avy
     anzu
-    beacon
     browse-kill-ring
     crux
     discover-my-major
